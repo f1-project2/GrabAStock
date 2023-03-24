@@ -47,7 +47,7 @@ Once we are able to find out the attributes, we can make the SVM predictions dat
 
 ![LSTM Model - Sample Result](lstm_model.PNG)
 
-Model was poor and clearly overfitted, this model suffers from multiple biases, one is that there is lack of emperical data. The model did too excellent of a job on the testing population which makes this model vulnerable to data outside of the population's sample size. This is ofcourse a mix of the aformentioned as well as a lack of domain knowledge in the industry as there are certainly better metrics that are simpler that the this but are rudementary in their analysis of a stock's value. 
+Model was poor and clearly overfitted, this model suffers from multiple biases, one is that there is lack of emperical data. The model did too excellent of a job on the testing population which makes this model vulnerable to data outside of the population's sample size. This is ofcourse a mix of the aformentioned as well as a lack of domain knowledge in the industry as there are certainly better metrics that are simpler that the this but are rudementary in their analysis of a stock's value. Using a 2 stage least squared model would have been a better statistcial model for this type of historical data for the ticker_stock used in the .ipynb!
 
 ## Sentimental Analysis
 
