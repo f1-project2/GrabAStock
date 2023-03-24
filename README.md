@@ -49,5 +49,11 @@ Once we are able to find out the attributes, we can make the SVM predictions dat
 
 ## Sentimental Analysis
 
+Using BeautifulSoup for web scraping is a great way to parse real time news but lacks quality control, hence we use a kaggle dataset of vetted Twitter sentiments.
+
+It is noteworthy that GAN models can perform quite well with time series and even stock data. Moreover, using raw historical data gives quite poor predictions, but when we add technical indicators and Twitter sentiment analysis it becomes much easier for the model to make predictions.
+
+This might not work for "less popular" stock tickers as the number of tweets about such stocks gets drastically lower than, for example, Tesla. In this case sentiment scores might fail to give the bigger picture and might even decrease model results.
+
 ## Scoring Results and Final Recommendation
 First, the alphavantage API converts the stock ticker to the company name. Next, it assigns opinions to buy, sell or hold the stock for SVC, ADABoost and LSTM based on whether the algorithms predicts the stock will go up or down (-1 or 1). The next part of the code uses the predicted averages of the timeframe which the user inputs (day, week or month) to make a rating and risk analysis on the stock. The function determines the rating based on how far the stock will fluctuate between 20% and -20% and assigns the rating based on how close the prediction is to each. The risk rating function works similarly, using the rating to determine the stock's risk and how strong of a buy it is. Finally, it asks the user to input the amount they plan to invest, and will give the user the predicted return on their investment as well as the rating and risk.
